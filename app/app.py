@@ -1,6 +1,5 @@
 from flask import Flask
-from markupsafe import escape
-from flask import render_template, abort, redirect, url_for
+from flask import render_template, abort
 from recommend import make_matrix_correlation, getSong, setPrevSong
 import random
 from flask_cors import CORS
