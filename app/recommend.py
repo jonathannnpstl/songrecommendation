@@ -1,9 +1,7 @@
 import os
 import pandas as pd
 import numpy as np
-from scipy import spatial
-from sklearn.preprocessing import StandardScaler
-from scipy.spatial import distance
+from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics.pairwise import cosine_similarity
 
 
@@ -13,7 +11,7 @@ print(data)
 #remove rows with no track name
 data=data.dropna(subset=['track_name'])
 
-#gets the needed attributes
+#selecting the attributes
 df=data[data.columns[5:20]]
 df['track_genre']=data['track_genre']
 df['time_signature']=data['time_signature']
@@ -23,7 +21,7 @@ df['track_id']=data['track_id']
 
 #Normalization
 x=df[df.drop(columns=['track_name','track_genre', 'track_id']).columns].values
-scaler = StandardScaler().fit(x)
+scaler = MinMaxScaler().fit(x)
 X_scaled = scaler.transform(x)
 df[df.drop(columns=['track_name','track_genre', 'track_id']).columns]=X_scaled
 
