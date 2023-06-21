@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="chat">
+            <div class="chat-container">
+                <div class="chat-listcontainer">
+                    <ul class="chat-message-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="replies">
+            <ul>
+                <li class="reply mood gif" style="--animation-order: 3;" id="lit"><span>I feel lit! <img
+                            src="{{ url_for('static', filename='assets/emojis/lit.png')}}"> </span></li>
+                <li class="reply mood gif" style="--animation-order: 1;" id="dance"><span>I wanna dance. <img
+                            src="{{ url_for('static', filename='assets/emojis/dance.png')}}"></span> </li>
+                <li class="reply mood gif" style="--animation-order: 4;" id="evil"><span>Possessed by evil. <img
+                            src="{{ url_for('static', filename='assets/emojis/evil.png')}}"></span></li>
+                <li class="reply mood gif" style="--animation-order: 5;" id="study"><span>Need to study. <img
+                            src="{{ url_for('static', filename='assets/emojis/study.png')}}"></span></li>
+                <li class="reply mood gif" style="--animation-order: 2;" id="sad"><span>I don't feel okay. <img
+                            src="{{ url_for('static', filename='assets/emojis/sad.png')}}"></span></li>
+                <li class="reply mood gif" style="--animation-order: 8;" id="robot"><span>*Electronic Noises*. <img
+                            src="{{ url_for('static', filename='assets/emojis/robot.png')}}"></span></li>
+                <li class="reply mood gif" style="--animation-order: 7;" id="club"><span>Clubbing vibes. <img
+                            src="{{ url_for('static', filename='assets/emojis/club.png')}}"></span></li>
+                <li class="reply mood gif" style="--animation-order: 9;" id="sleep"><span>I want relaxed. <img
+                            src="{{ url_for('static', filename='assets/emojis/sleep.png')}}"></span></li>
+                <li class="reply mood gif" style="--animation-order: 6;" id="classical"><span>In the 1700s. <img
+                            src="{{ url_for('static', filename='assets/emojis/classical.png')}}"></span></li>
+                <li class="reply yes-no" style="--animation-order: 1;" id="yes">Yes.</li>
+                <li class="reply yes-no" style="--animation-order: 2;" id="no">No.</li>
+
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
