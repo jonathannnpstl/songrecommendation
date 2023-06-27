@@ -4,7 +4,7 @@ Web based song recommendation using Flask
 
 ## Read how I made this on this link:
 
-(Yet to be posted)
+https://medium.com/@jonathannnpstl/how-i-built-my-personal-song-recommendation-project-59d68258227d
 
 # Development
 
